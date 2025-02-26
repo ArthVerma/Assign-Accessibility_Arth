@@ -19,13 +19,13 @@
             <nav>
                 <ul>
                     <li class="menu-item-has-children">
-                        <a href="#">Features</a>
-                        <ul>
-                            <li><a href="">Standard Post</a></li>
-                            <li><a href="">Video Thumbnail Post</a></li>
-                            <li><a href="">Gallery Post</a></li>
-                            <li><a href="">Video Post</a></li>
-                            <li><a href="">Audio Post</a></li>
+                        <a href="#" aria-haspopup="true" aria-expanded="false">Features</a>
+                        <ul role="menu">
+                            <li><a href="" role="menuitem">Standard Post</a></li>
+                            <li><a href="" role="menuitem">Video Thumbnail Post</a></li>
+                            <li><a href="" role="menuitem">Gallery Post</a></li>
+                            <li><a href="" role="menuitem">Video Post</a></li>
+                            <li><a href="" role="menuitem">Audio Post</a></li>
                         </ul>
                     </li>
                     <li class="current-menu-item"><a href="">Guides</a></li>
@@ -36,7 +36,9 @@
             </nav>
 
             <div class="top-logo">
-                <a href="/"><img src="./assets/images/site-logo.png" /></a>
+                <a href="/" title="Dreamla Home">
+                    <img src="./assets/images/site-logo.png" alt="Dreamla site logo" />
+                </a>
             </div>
         </div>  
     </header>
@@ -45,30 +47,30 @@
         <div class="container">
             <article>
                 <div class="image-part">
-                    <a href="">
-                        <img width="960" height="750" src="./assets/images/top-places-you-should-visit-right-now.jpg" />  
+                    <a href="" title="View Top Places You Should Visit Right Now">
+                        <img width="960" height="750" src="./assets/images/top-places-you-should-visit-right-now.jpg" alt="Scenic view of top travel destinations" />  
                     </a>
                 </div>
 
                 <div class="content-part">
                     <div class="post-header">
-                        <h3 class="post-title">
+                        <h1 class="post-title">
                             <a href="">Top Places You Should Visit Right Now</a>
-                        </h3>
+                        </h1>
                     </div>
 
                     <div class="post-list-entry">
                         <p>Contact us to learn more!</p>
                         <form action="/" method="post">
-                            <label>Name</label>
-                            <input type="text" name="fullname" required />
+                            <label for="fullname">Name</label>
+                            <input type="text" id="fullname" name="fullname" required />
                             
-                            <label>Email</label>
-                            <input type="email" name="email" required />
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required />
 
                             <div class="flexbox">
-                                <span></span>
-                                <label class="check">Check Me (required)</label>
+                                <input type="checkbox" id="checkme" name="checkme" required />
+                                <label for="checkme" class="check">Check Me (required)</label>
                             </div>
 
                             <input type="submit" value="Submit" />
@@ -82,19 +84,36 @@
     <footer id="footer">
         <div class="container">
             <div class="footer-logo">
-                <a href=""><img src="./assets/images/footer-logo.png" /></a>
+                <a href="" title="Dreamla Footer">
+                    <img src="./assets/images/footer-logo.png" alt="Dreamla footer logo" />
+                </a>
             </div>  
 
             <div class="footer-social-links">
-                <a href="Facebook" target="_blank"><i class="fa fa-facebook"></i><span>Facebook</span></a>
-                <a href="Twitter" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a>
-                <a href="Instagram" target="_blank"><i class="fa fa-instagram"></i><span>Instagram</span></a>
-                <a href="Youtube" target="_blank"><i class="fa fa-youtube-play"></i><span>Youtube</span></a>
-                <a href="Pinterest" target="_blank"><i class="fa fa-pinterest"></i><span>Pinterest</span></a>
+                <a href="https://facebook.com" target="_blank">
+                    <em class="fa fa-facebook" aria-hidden="true"></em>
+                    <span class="visually-hidden">Facebook</span>
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <em class="fa fa-twitter" aria-hidden="true"></em>
+                    <span class="visually-hidden">Twitter</span>
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <em class="fa fa-instagram" aria-hidden="true"></em>
+                    <span class="visually-hidden">Instagram</span>
+                </a>
+                <a href="https://youtube.com" target="_blank">
+                    <em class="fa fa-youtube-play" aria-hidden="true"></em>
+                    <span class="visually-hidden">Youtube</span>
+                </a>
+                <a href="https://pinterest.com" target="_blank">
+                    <em class="fa fa-pinterest" aria-hidden="true"></em>
+                    <span class="visually-hidden">Pinterest</span>
+                </a>
             </div> 
             
             <div id="footer-copyright">
-                &copy; 2021 Dreamla - All Rights Reserved.
+                © 2021 Dreamla - All Rights Reserved.
             </div>
         </div>
     </footer>

@@ -1,5 +1,3 @@
-/* This is the original example. You can take all css styles from here. */
-
 body {
     font-family: Quando;
     font-size: 15px;
@@ -60,62 +58,29 @@ label {
     width: 100%;
     margin-bottom: 5px;
 }
-input[type=text], input[type=email] {
+input[type="text"], input[type="email"] {
     font-family: Quando;
     padding: 10px;
     display: block;
-    width: calc( 100% - 24px );
+    width: calc(100% - 24px);
     margin-bottom: 15px;
+}
+input[type="checkbox"] {
+    margin-right: 10px;
 }
 form .flexbox {
     display: flex;
     align-items: center;
 }
-form span {
-    display: block;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    margin-bottom: 15px;
-    margin-right: 10px;
-    position: relative;
-}
-/* hover */
-form .flexbox:hover span {
-    background-color: #ccc;
-}
-/* checked */
-form .flexbox span.checked {
-    background-color: #2196F3;
-}
-form .flexbox span:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-form .flexbox span.checked:after {
-    display: block;
-}
-.container span.checked:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
 label.check {
-    display: block;
+    display: inline-block;
     width: auto;
     margin-bottom: 15px;
 }
-input[type=submit] {
+input[type="submit"] {
     font-family: Quando;
     text-transform: uppercase;
-    width: calc( 100% - 2px );
+    width: calc(100% - 2px);
     background-color: #B7D2FF;
     border: none;
     color: white;
@@ -125,18 +90,28 @@ input[type=submit] {
     cursor: pointer;
     transition: all 0.5s;
 }
-input[type=submit]:hover {
+input[type="submit"]:hover {
     background-color: #84B2FF;
 }
-
 
 .container {
     width: 94%;
     margin: 0 auto;
 }
 
+/* Visually hidden class for accessibility */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
 
-/* header and main nav */
+/* Header and main nav */
 header {
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -149,9 +124,7 @@ header nav ul {
     margin: 20px auto 40px;
 }
 
-
-
-/* posts */
+/* Posts */
 article {
     margin-bottom: 50px;
     display: flex;
@@ -178,9 +151,7 @@ article {
     color: #35c4ce;
 }
 
-
-
-/* footer */
+/* Footer */
 footer {
     padding: 30px 0;
     text-align: center;
@@ -209,15 +180,14 @@ footer {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-.footer-social-links a span {
-    display: none;
+.footer-social-links em {
+    margin-right: 5px;
 }
 #footer-copyright {
     padding: 20px 0;
     font-size: 12px;
     color: #989898;
 }
-
 
 @media only screen and (min-width: 650px) {
     .container {
@@ -261,7 +231,7 @@ footer {
     .current-menu-item a {
         border-bottom: 2px solid #324360;
     }
-    /* sub nav */
+    /* Sub nav */
     header nav ul ul {
         visibility: hidden;
         opacity: 0;
@@ -295,9 +265,7 @@ footer {
         color: #000; 
     }
 
-
-
-    /* posts */
+    /* Posts */
     article {
         display: flex;
     }
@@ -317,17 +285,8 @@ footer {
         padding-left: 50px;
     }
 
-
-
-    /* footer */
+    /* Footer */
     .footer-social-links a {
         margin: 0 28px;
-    }
-    .footer-social-links i {
-        margin-right: 5px;
-    }
-    .footer-social-links a span {
-        display: inline;
-        font-size: 11px;
     }
 }
